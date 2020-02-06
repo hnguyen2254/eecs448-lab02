@@ -32,7 +32,7 @@ int LinkedList<T>::size() const
 	Node<T>* temp = m_front;
 	int size_count = 0;
 
-	if(m_front == nullptr)
+	if(isEmpty())
 	{
 		return(0);
 	}
