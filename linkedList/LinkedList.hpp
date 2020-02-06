@@ -39,7 +39,7 @@ int LinkedList<T>::size() const
 	/** TODO
 		Fix this method
 	*/
-	return(0);
+	return(size_count);
 }
 
 template <typename T>
@@ -118,6 +118,8 @@ bool LinkedList<T>::removeBack()
 	Node<T>* lastNode = nullptr;
 	Node<T>* secondintoLast = nullptr;
 	bool isRemoved = false;
+
+
 
 	/** TODO
 		Fix this method
