@@ -129,13 +129,14 @@ bool LinkedList<T>::removeBack()
 	bool isRemoved = false;
 
 	if(isEmpty())
-	{
+	{	m_size = 0;
 		return(isRemoved);
 	}
 
 	if(m_size == 1)
 	{
 		delete m_front;
+		m_size--;
 		return(true);
 	}
 
@@ -150,7 +151,7 @@ bool LinkedList<T>::removeBack()
 
 	delete lastNode;
 	secondintoLast->setNext(nullptr);
-
+	m_size--;
 
 	/** TODO
 		Fix this method
