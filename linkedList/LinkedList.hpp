@@ -30,8 +30,13 @@ template <typename T>
 int LinkedList<T>::size() const
 {
 	Node<T>* temp = m_front;
-	int size_count = 1;
-	while(temp->getNext() != nullptr)
+	int size_count = 0;
+
+	if(m_front = nullptr)
+	{
+		return(0);
+	}
+	while(temp != nullptr)
 	{
 		size_count++;
 		temp = temp->getNext();
