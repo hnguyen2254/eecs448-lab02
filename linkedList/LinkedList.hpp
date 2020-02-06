@@ -132,7 +132,7 @@ bool LinkedList<T>::removeBack()
 		delete m_front;
 	}
 
-	for(int = = 0; i < size()-2; i++)
+	for(int i = 0; i < size()-2; i++)
 	{
 		secondintoLast = secondintoLast->getNext();
 		lastNode = lastNode->getNext();
