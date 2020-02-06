@@ -34,7 +34,7 @@ int LinkedList<T>::size() const
 	while(temp->getNext() != nullptr)
 	{
 		size_count++;
-		temp->getNext();
+		temp = temp->getNext();
 	}
 	/** TODO
 		Fix this method
@@ -48,6 +48,15 @@ bool LinkedList<T>::search(T value) const
 	Node<T>* temp = m_front;
 	bool isFound = false;
 
+	while(temp->getValue() != value && temp->getNext() != nullptr)
+	{
+		temp = temp->getNext();
+	}
+
+	if(temp->getValue() == value)
+	{
+		isFound = true;
+	}
 	/** TODO
 		Fix this method
 	*/
